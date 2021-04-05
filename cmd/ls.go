@@ -22,9 +22,9 @@ import (
 	"github.com/spf13/viper"
 )
 
-// listCmd represents the list command
-var listCmd = &cobra.Command{
-	Use:   "list",
+// lsCmd represents the ls command
+var lsCmd = &cobra.Command{
+	Use:   "ls",
 	Short: "list all current jump points",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -36,15 +36,15 @@ var listCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(listCmd)
+	rootCmd.AddCommand(lsCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// listCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// lsCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// listCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// lsCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
